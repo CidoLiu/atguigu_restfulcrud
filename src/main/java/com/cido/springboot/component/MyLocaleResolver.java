@@ -17,6 +17,7 @@ public class MyLocaleResolver implements LocaleResolver {
         Locale locale = Locale.getDefault();
         if (!StringUtils.isEmpty(language)) {
             // 若参数不为空，则解析参数，并使用参数初始化一个Locale对象
+            // zh_CN
             String[] split = language.split("_");
             locale = new Locale(split[0], split[1]);
         }
